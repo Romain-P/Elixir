@@ -2,6 +2,10 @@
 #default encoding: utf-8
 
 bytes = <<97, 98, 99>>
+same_bytes = <<?a, ?b, ?c>>
+
+IO.puts(bytes <> " " <> same_bytes) #abc abc
+
 IO.puts(byte_size(bytes)) #3 bytes of 8 bits
 IO.puts(byte_size("abc")) #3
 

@@ -53,5 +53,16 @@ IO.puts("Hello Word")
   # stored in contiguous memory block, which make accessing them faster but cost on insetions/deletions
   tuple = {10, "tuplestring", :tuplxd, false}
 
+  #concanate
+
+  concat = basic ++ [:hellow, :world]
+
+
   IO.inspect(basic); IO.inspect(tuple)
 
+#range
+values = 2..12
+
+#perform actions on ranges
+IO.puts(Enum.member?(values, 2)) #true
+IO.puts(Enum.count(values)) #11
