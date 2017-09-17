@@ -32,10 +32,13 @@ IO.puts(x)
 
 #case, pattern matching
 
-y = :tuple
+y = :array
 x = [:some, y, :values]
 
 case x do
   x when hd(x) === y -> IO.puts("won't match, head of x is :some")
-  [:some, ^y, z] -> IO.puts("matched with z atom :#{z}")
+  [_, ^y, z] -> IO.puts("matched with z=#{z} & head hidden")
 end
+
+#^ used to get a value of an existing variable
+#^ only usable on matching expressions
