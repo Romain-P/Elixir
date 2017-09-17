@@ -14,9 +14,14 @@ if true do
   IO.puts(test)
 end
 
-x = 10
+unless true do
+  "never called"
+end
 
 #used for if/elseif/else
+
+x = 10
+
 cond do
   x == 10 ->
     IO.puts("got ten")
