@@ -18,7 +18,10 @@ defmodule HelloModule do
   def foo do
     # anonymous function, closed into function `foo` scope
     anonymous = fn y -> y * y  / 2 end
+    anonymous_shorthand = &(&1 * &1 / 2)
+
     anonymous.(10) |> IO.puts
+    anonymous_shorthand.(10) |> IO.puts
 
     anonymous_multiple_body = fn
       x when x > 0 -> x * x
