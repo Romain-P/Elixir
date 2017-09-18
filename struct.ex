@@ -1,6 +1,6 @@
 defmodule Player do
-  @enforce_keys [:id, :name] #keys that must be initialized
-  defstruct [:id, :name, level: 1] #level got 1 as default value
+  @enforce_keys :id, :name #keys that must be initialized
+  defstruct :id, :name, level: 1 #level got 1 as default value
 end
 
 defmodule World do
