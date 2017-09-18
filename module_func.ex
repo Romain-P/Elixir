@@ -1,10 +1,18 @@
 defmodule HelloModule do
+  @moduledoc """
+    some doc for this module
+  """
+  @module_const 10
+  @another "ok"
+
   def public do
     #shared with all modules
+    @module_const #read at compile time
   end
 
   defp private do
     #closed for this module
+    @another #read at compile time
   end
 
   def foo do
