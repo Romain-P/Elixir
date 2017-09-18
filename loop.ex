@@ -24,7 +24,7 @@ defmodule RList do
     [func.(head) | maps(tail, func)]
   end
 
-  def maps([], func) do
+  defp maps([], func) do
     []
   end
 end
